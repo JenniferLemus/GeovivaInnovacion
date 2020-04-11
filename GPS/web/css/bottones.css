@@ -1,0 +1,144 @@
+
+/* Style the button and place it in the middle of the container/image */
+.containerrrr .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  font-size: 16px;
+  padding: 40px 120px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-color: #000;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.containerrrr .btn:hover {
+  background-color: black;
+   color: white;
+}
+.container2 .btn {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 40px 120px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container2 .btn:hover {
+  background-color: black;
+   color: white;
+}.container3 .btn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 40px 120px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container3 .btn:hover {
+    background-color: black;
+   color: white;
+}
+
+.container4 .btn {
+  position: absolute;
+ top:  900px; 
+  left: 1700px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+    background-color: transparent;
+  color: white;
+  font-size: 20px;
+  padding: 40px 120px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container4 .btn:hover {
+    background-color:#179b77;
+   color: white;
+}
+
+.flora .btn {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  font-size: 16px;
+  padding: 40px 120px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-color: #000;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.flora .btn:hover {
+  background-color: black;
+   color: white;
+}
+.fauna .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  font-size: 16px;
+  padding: 40px 120px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-color: #000;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.fauna .btn:hover {
+  background-color: black;
+   color: white;
+}
+.Vistas .btn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  font-size: 16px;
+  padding: 40px 120px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-color: #000;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.Vistas .btn:hover {
+  background-color: black;
+   color: white;
+}
