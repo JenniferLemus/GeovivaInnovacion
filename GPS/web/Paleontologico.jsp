@@ -37,7 +37,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <link href='//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     </head>
 
-    <body style="background-image: url(images/Pelontologico.jpg)">
+     <body id="body" style="background-image: url(images/Pelontologico.jpg)">
+            <jsp:include page="/menuLateral.jsp" flush="true"></jsp:include>
         <!--  particles  -->
         <div id="particles-js"></div>
         <!-- //particles -->

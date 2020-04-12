@@ -37,8 +37,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <link href='//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
         <link href='//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     </head>
-
-    <body style="background-image: url(images/Arqueologico.jpg)">
+  
+    <body id="body" style="background-image: url(images/Arqueologico.jpg)">
+       
+                <jsp:include page="/menuLateral.jsp" flush="true"></jsp:include>
+     
         <!--  particles  -->
         <div id="particles-js"></div>
         <!-- //particles -->
@@ -137,6 +140,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <%} else {%>
     ${exito}
     <%}%>
+  
 </body>
 
 </html>
