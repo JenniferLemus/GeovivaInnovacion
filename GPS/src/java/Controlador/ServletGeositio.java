@@ -53,10 +53,10 @@ public class ServletGeositio extends HttpServlet {
         case 1: //agregar registro
         if (Dgeositio.AgregarRegistro()) {
 
-          request.setAttribute("exito", "<script>alert('El Geositio fue registrado correctamente')</script>");
+          request.setAttribute("exito", "<script>Swal.fire('El Geositio fue registrado correctamente')</script>");
           request.getRequestDispatcher("menusitios.jsp").forward(request, response);
         } else {
-          request.setAttribute("error", "<script>alert('El Geositio no pudo ser registrado correctamente')</script>");
+          request.setAttribute("error", "<script>Swal.fire('El Geositio no pudo ser registrado correctamente')</script>");
         }
         //para redirigir a el formulario ->""
         request.getRequestDispatcher("registrar_geositio.jsp").forward(request, response);
@@ -64,11 +64,11 @@ public class ServletGeositio extends HttpServlet {
 
         case 2://   Actualizar Registro
         if (Dgeositio.ActualizarRegistro()) {
-          request.setAttribute("exito", "<script>alert('El Geositio fue actualizado correctamente')</script>");
+          request.setAttribute("exito", "<script>Swal.fire('El Geositio fue actualizado correctamente')</script>");
           request.getRequestDispatcher("vista_geositio.jsp").forward(request, response);
 
         } else {
-          request.setAttribute("error", "<script>alert('El Geositio no pudo ser actualizado correctamente intentelo de nuevo')</script>");
+          request.setAttribute("error", "<script>Swal.fire('El Geositio no pudo ser actualizado correctamente intentelo de nuevo')</script>");
           request.getRequestDispatcher("vista_geositio.jsp").forward(request, response);
         }
         request.getRequestDispatcher("actualizar_Geositio.jsp").forward(request, response);
@@ -82,7 +82,7 @@ public class ServletGeositio extends HttpServlet {
                   request.getRequestDispatcher("actualizar_Geositio.jsp").forward(request, response);
                   
               }else{
-              request.setAttribute("error","<script>alert('El Geositio no se encontro')</script>");
+              request.setAttribute("error","<script>Swal.fire('El Geositio no se encontro')</script>");
               request.getRequestDispatcher("vista_geositio.jsp").forward(request, response);
                   
               }       

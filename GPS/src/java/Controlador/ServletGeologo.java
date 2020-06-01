@@ -52,11 +52,11 @@ public class ServletGeologo extends HttpServlet {
         switch (opcion){
             case 1:
                 if (Dgeologo.AgregarRegistro()){
-                request.setAttribute("exito", "<script>alert('El Geologo fue creado correctamente')</script>");
+                request.setAttribute("exito", "<script>Swal.fire('El Geologo fue creado correctamente')</script>");
                 request.getRequestDispatcher("crear_geoparque.jsp").forward(request, response);
                 
                 } else {
-                request.setAttribute("error", "<script>alert('El Geologo no pudo ser registrado correctamente')</script>");
+                request.setAttribute("error", "<script>Swal.fire('El Geologo no pudo ser registrado correctamente')</script>");
                 }
                 
                 request.getRequestDispatcher("registrar_geologo.jsp").forward(request, response);
@@ -64,11 +64,11 @@ public class ServletGeologo extends HttpServlet {
                 break;
         case 2://   Actualizar Registro
         if (Dgeologo.ActualizarRegistro()) {
-          request.setAttribute("exito", "<script>alert('El Geologo fue actualizado correctamente')</script>");
+          request.setAttribute("exito", "<script>Swal.fire('El Geologo fue actualizado correctamente')</script>");
           request.getRequestDispatcher("Vista_Geologo.jsp").forward(request, response);
 
         } else {
-          request.setAttribute("error", "<script>alert('El Geologo no pudo ser actualizado correctamente')</script>");
+          request.setAttribute("error", "<script>Swal.fire('El Geologo no pudo ser actualizado correctamente')</script>");
         }
         request.getRequestDispatcher("actualizar_Geologo.jsp").forward(request, response);
         break;
@@ -81,7 +81,7 @@ public class ServletGeologo extends HttpServlet {
                   request.getRequestDispatcher("actualizar_Geologo.jsp").forward(request, response);
                   
               }else{
-              request.setAttribute("error","<script>alert('El Geologo no se encontro')</script>");
+              request.setAttribute("error","<script>Swal.fire('El Geologo no se encontro')</script>");
               request.getRequestDispatcher("Vista_Geologo.jsp").forward(request, response);
                   
               }       

@@ -49,10 +49,10 @@ public class ServletRegistro extends HttpServlet {
 
             case 1: //agregar registro
                 if (Duser.AgregarRegistro()) {
-                    request.setAttribute("exito", "<script>alert('El usuario fue registrado correctamente')</script>");
+                    request.setAttribute("exito", "<script>Swal.fire('El usuario fue registrado correctamente')</script>");
                     request.getRequestDispatcher("Login.jsp").forward(request, response);
                 } else {
-                    request.setAttribute("error", "<script>alert('El usuario no fue registrado correctamente')</script>");
+                    request.setAttribute("error", "<script>Swal.fire('El usuario no fue registrado correctamente')</script>");
                     request.getRequestDispatcher("menu.jsp").forward(request, response);
                 }
                 break;

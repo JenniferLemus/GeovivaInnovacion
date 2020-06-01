@@ -56,20 +56,20 @@ public class ServletAccidenteGeologico extends HttpServlet {
 
       case 1://   Agregar Registro
         if (Daccidente.AgregarRegistro()) {
-          request.setAttribute("exito", "<script>alert('El Geositio fue creado correctamente')</script>");
+          request.setAttribute("exito", "<script>Swal.fire('El Geositio fue creado correctamente')</script>");
 
         } else {
-          request.setAttribute("error", "<script>alert('El Geositio no pudo ser registrado correctamente')</script>");
+          request.setAttribute("error", "<script>Swal.fire('El Geositio no pudo ser registrado correctamente')</script>");
         }
         request.getRequestDispatcher("crear_geoparque.jsp").forward(request, response);
         break;
 
       case 2://   Actualizar Registro
         if (Daccidente.ActualizarRegistro()) {
-          request.setAttribute("exito", "<script>alert('El Geositio fue actualizado correctamente')</script>");
+          request.setAttribute("exito", "<script>Swal.fire('El Geositio fue actualizado correctamente')</script>");
           request.getRequestDispatcher("Vista_Geologico.jsp").forward(request, response);
         } else {
-          request.setAttribute("error", "<script>alert('El Geositio no pudo ser actualizado correctamente intentelo de nuevo')</script>");
+          request.setAttribute("error", "<script>Swal.fire('El Geositio no pudo ser actualizado correctamente intentelo de nuevo')</script>");
           request.getRequestDispatcher("Vista_Geologico.jsp").forward(request, response);
         }
         request.getRequestDispatcher("actualizar_Geologico.jsp").forward(request, response);
@@ -83,7 +83,7 @@ public class ServletAccidenteGeologico extends HttpServlet {
           request.getRequestDispatcher("actualizar_Geologico.jsp").forward(request, response);
 
         } else {
-          request.setAttribute("error", "<script>alert('El yacimiento Geologico no se encontro')</script>");
+          request.setAttribute("error", "<script>Swal.fire('El yacimiento Geologico no se encontro')</script>");
           request.getRequestDispatcher("Vista_Geologico.jsp").forward(request, response);
 
         }

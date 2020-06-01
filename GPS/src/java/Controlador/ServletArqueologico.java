@@ -55,20 +55,20 @@ public class ServletArqueologico extends HttpServlet {
 
             case 1://   Agregar Registro
                 if (Dar.AgregarRegistro()) {
-                    request.setAttribute("exito", "<script>alert('El Geositio fue creado correctamente')</script>");
+                    request.setAttribute("exito", "<script>Swal.fire('El Geositio fue creado correctamente')</script>");
 
                 } else {
-                    request.setAttribute("error", "<script>alert('El Geositio no pudo ser registrado correctamente')</script>");
+                    request.setAttribute("error", "<script>Swal.fire('El Geositio no pudo ser registrado correctamente')</script>");
                 }
                 request.getRequestDispatcher("Arqueologico.jsp").forward(request, response);
                 break;
 
             case 2://   Actualizar Registro
                 if (Dar.ActualizarRegistro()) {
-                    request.setAttribute("exito", "<script>alert('El Geositio fue actualizado correctamente')</script>");
+                    request.setAttribute("exito", "<script>Swal.fire('El Geositio fue actualizado correctamente')</script>");
                     request.getRequestDispatcher("Vista_Arqueologico.jsp").forward(request, response);
                 } else {
-                    request.setAttribute("error", "<script>alert('El Geositio no pudo ser actualizado correctamente Intententelo de nuevo')</script>");
+                    request.setAttribute("error", "<script>Swal.fire('El Geositio no pudo ser actualizado correctamente Intententelo de nuevo')</script>");
                     request.getRequestDispatcher("Vista_Arqueologico.jsp").forward(request, response);
                 }
                 request.getRequestDispatcher("actualizar_Arqueologico.jsp").forward(request, response);
@@ -82,7 +82,7 @@ public class ServletArqueologico extends HttpServlet {
                     request.getRequestDispatcher("actualizar_Arqueologico.jsp").forward(request, response);
 
                 } else {
-                    request.setAttribute("error", "<script>alert('El yacimiento arqueologico no se encontro')</script>");
+                    request.setAttribute("error", "<script>Swal.fire('El yacimiento arqueologico no se encontro')</script>");
                     request.getRequestDispatcher("Vista_Arqueologico.jsp").forward(request, response);
 
                 }

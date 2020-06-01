@@ -11,7 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@page session="true" %>
 <!DOCTYPE HTML>
-<html lang="zxx">
+<html lang="es">
 
     <head>
         <title>Registrar Arqueologico</title>
@@ -39,8 +39,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </head>
   
     <body id="body" style="background-image: url(images/Arqueologico.jpg)">
-       
-                <jsp:include page="/menuLateral.jsp" flush="true"></jsp:include>
+        <div>
+             <jsp:include page="/menuLateral.jsp" flush="true"></jsp:include>
+        </div>
+               
      
         <!--  particles  -->
         <div id="particles-js"></div>

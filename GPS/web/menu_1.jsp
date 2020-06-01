@@ -513,7 +513,7 @@
         <!-- copyright -->
         <div class="w3layouts_copy_right">
             <div class="container">
-                <p>2018 Geoviva.| Todos los derechos reservados</p>
+                <p>2020 Geoviva.| Todos los derechos reservados</p>
             </div>
         </div>
         <!-- //copyright -->

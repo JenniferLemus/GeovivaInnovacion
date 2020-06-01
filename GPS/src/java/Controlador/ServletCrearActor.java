@@ -52,9 +52,9 @@ public class ServletCrearActor extends HttpServlet {
       case 1: //agregar registro
         if (DC.AgregarRegistro()) {
 
-          request.setAttribute("exito", "<script>alert('El Actor fue registrado correctamente')</script>");
+          request.setAttribute("exito", "<script>Swal.fire('El Actor fue registrado correctamente')</script>");
         } else {
-          request.setAttribute("error", "<script>alert('El Actor no pudo ser registrado correctamente')</script>");
+          request.setAttribute("error", "<script>Swal.fire('El Actor no pudo ser registrado correctamente')</script>");
         }
         //para redirigir a el formulario ->""
         request.getRequestDispatcher("registrar_actor.jsp").forward(request, response);

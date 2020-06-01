@@ -52,9 +52,9 @@ public class ServletPaleontologico extends HttpServlet {
         switch (opcion){
             case 1:
                 if (Dpaleontologico.AgregarRegistro()){
-                request.setAttribute("exito", "<script>alert('El Geositio fue creado correctamente')</script>");
+                request.setAttribute("exito", "<script>Swal.fire('El Geositio fue creado correctamente')</script>");
                 } else {
-                request.setAttribute("error", "<script>alert('El Geositio no pudo ser registrado correctamente')</script>");
+                request.setAttribute("error", "<script>Swal.fire('El Geositio no pudo ser registrado correctamente')</script>");
                 }
                 
                 request.getRequestDispatcher("Paleontologico.jsp").forward(request, response);
@@ -62,11 +62,11 @@ public class ServletPaleontologico extends HttpServlet {
                 break;
         case 2://   Actualizar Registro
         if (Dpaleontologico.ActualizarRegistro()) {
-          request.setAttribute("exito", "<script>alert('El Geositio fue actualizado correctamente')</script>");
+          request.setAttribute("exito", "<script>Swal.fire('El Geositio fue actualizado correctamente')</script>");
           request.getRequestDispatcher("vista_paleontologico.jsp").forward(request, response);
 
         } else {
-          request.setAttribute("error", "<script>alert('El Geositio no pudo ser actualizado correctamente intentelo de nuevo')</script>");
+          request.setAttribute("error", "<script>Swal.fire('El Geositio no pudo ser actualizado correctamente intentelo de nuevo')</script>");
           request.getRequestDispatcher("vista_paleontologico.jsp").forward(request, response);
         }
         request.getRequestDispatcher("actualizar_paleontologico.jsp").forward(request, response);
@@ -80,7 +80,7 @@ public class ServletPaleontologico extends HttpServlet {
                   request.getRequestDispatcher("actualizar_paleontologico.jsp").forward(request, response);
                   
               }else{
-              request.setAttribute("error","<script>alert('El yacimiento Paleontologico no se encontro')</script>");
+              request.setAttribute("error","<script>Swal.fire('El yacimiento Paleontologico no se encontro')</script>");
               request.getRequestDispatcher("vista_paleontologico.jsp").forward(request, response);
                   
               }

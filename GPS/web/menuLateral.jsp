@@ -3,66 +3,44 @@
     Created on : 11/04/2020, 08:37:28 PM
     Author     : Tiiin
 --%>
-
+<link href="css/sweetalert2.min.css" rel="stylesheet" type="text/css"/>
+<script src="js/sweetalert2.min.js" type="text/javascript"></script>
 <style>
-    #menuLateral{
-        position: absolute;
-    }
-    #mains{position: fixed;}
+ 
+/*Menu*/
+.menu{
+    width: 100%;
+    background-color: #3391A6;
+    overflow: hidden;
+    z-index: 2;
+}
 
-    .menu {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #309B8C;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-    }
-    .t{
-        opacity: 0.6;
-    }
 
-    .menu a {
-        text-align: initial;
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: white;
-        display: block;
-        transition: 0.3s;
-    }
+.menu a{
+    border:none;
+    float:left;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: #3391A6 ;
+    text-decoration: none;
+}
 
-    .menu a:hover {
-        color: #f1f1f1;
-    }
-
-    .menu .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
-
-    #mains {
-        transition: margin-left .5s;
-        padding: 16px;
-        color: white;
-    }
-
-    @media screen and (max-height: 450px) {
-        .menu {padding-top: 15px;}
-        .menu a {font-size: 18px;}
-    }
+.menu a:hover{
+    background-color: #007cae;
+    color: white;
+    text-decoration: none;
+}
 </style>
 
+
+<!--Esto esta bien salu2-->
 <div id="menuLateral">
-    <div id="menu" class="menu t">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div id="menu" class="menu ">
+  
         <a href="/GPS/Arqueologico.jsp">Arqueologico</a>
         <a href="/GPS/Geologico.jsp">Geologico</a>
         <a href="/GPS/Guardabosques.jsp">Guardabosques</a>
@@ -73,13 +51,11 @@
         <a href="/GPS/registrar_fauna.jsp"> Fauna</a>
         <a href="/GPS/registrar_flora.jsp"> Flora</a>
         <a href="/GPS/registrar_geologo.jsp"> Geologo</a>
+  <a href="/GPS/Login.jsp"> Salir</a>
 
     </div>
 </div>
 
-<div id="mains">
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()" >&#9776; Menu </span>
-</div>
 
 <script>
     function openNav() {

@@ -231,13 +231,13 @@ body {
 
 .w3ls-pos {
     position: absolute;
-    top: 40px;
+      top: 53px;
     left: 34%;
 }
 .formulario {
 position: relative;
-margin-top: -710px;
-
+    margin-top: -651px;
+s
 }
 
 /*--//copyright--*/
@@ -407,7 +407,7 @@ nav.horizontal ul li {
     display: inline-block;
 }/* horizontal menu */
 img {
-    max-width:100%;
+   max-width: 70%;
 }
 
 /*--- end reset code ---*/

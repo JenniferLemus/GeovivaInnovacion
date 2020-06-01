@@ -51,10 +51,10 @@ public class SelvletGuardabosques extends HttpServlet {
         switch (opcion) {
             case 1:
                 if (DGuardabosques.AgregarRegistro()) {
-                    request.setAttribute("exito", "<script>alert('El Guardabosques fue creado correctamente')</script>");
+                    request.setAttribute("exito", "<script>Swal.fire('El Guardabosques fue creado correctamente')</script>");
                     request.getRequestDispatcher("registrar_geositio.jsp").forward(request, response);
                 } else {
-                    request.setAttribute("error", "<script>alert('El Guardabosques no pudo ser registrado correctamente')</script>");
+                    request.setAttribute("error", "<script>Swal.fire('El Guardabosques no pudo ser registrado correctamente')</script>");
                 }
 
                 request.getRequestDispatcher("registrar_geologo.jsp").forward(request, response);
@@ -63,10 +63,10 @@ public class SelvletGuardabosques extends HttpServlet {
 
             case 2://   Actualizar Registro
                 if (DGuardabosques.ActualizarRegistro()) {
-                    request.setAttribute("exito", "<script>alert('El Guardabosques fue actualizado correctamente')</script>");
+                    request.setAttribute("exito", "<script>Swal.fire('El Guardabosques fue actualizado correctamente')</script>");
                     request.getRequestDispatcher("vista_Guardabosques.jsp").forward(request, response);
                 } else {
-                    request.setAttribute("error", "<script>alert('El Guardabosques no pudo ser actualizado correctamente')</script>");
+                    request.setAttribute("error", "<script>Swal.fire('El Guardabosques no pudo ser actualizado correctamente')</script>");
                 }
                 request.getRequestDispatcher("actualizar_Guardabosques.jsp").forward(request, response);
                 break;
@@ -79,7 +79,7 @@ public class SelvletGuardabosques extends HttpServlet {
                     request.getRequestDispatcher("actualizar_guardabosques.jsp").forward(request, response);
 
                 } else {
-                    request.setAttribute("error", "<script>alert('El Guardabosques no se encontro')</script>");
+                    request.setAttribute("error", "<script>Swal.fire('El Guardabosques no se encontro')</script>");
                     request.getRequestDispatcher("Vista_Guardabosques.jsp").forward(request, response);
 
                 }

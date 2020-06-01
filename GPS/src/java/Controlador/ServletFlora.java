@@ -51,10 +51,10 @@ public class ServletFlora extends HttpServlet {
 
       case 1://   Agregar Registro
         if (Dflora.AgregarRegistro()) {
-          request.setAttribute("exito", "<script>alert('La flora fue creada correctamente')</script>");
+          request.setAttribute("exito", "<script>Swal.fire('La flora fue creada correctamente')</script>");
 
         } else {
-          request.setAttribute("error", "<script>alert('La flora no pudo ser registrada correctamente')</script>");
+          request.setAttribute("error", "<script>Swal.fire('La flora no pudo ser registrada correctamente')</script>");
         }
         request.getRequestDispatcher("registrar_flora.jsp").forward(request, response);
         break;
@@ -62,11 +62,11 @@ public class ServletFlora extends HttpServlet {
         
             case 2://   Actualizar Registro
         if (Dflora.ActualizarRegistro()) {
-          request.setAttribute("exito", "<script>alert('La Flora fue actualizada correctamente')</script>");
+          request.setAttribute("exito", "<script>Swal.fire('La Flora fue actualizada correctamente')</script>");
           request.getRequestDispatcher("vista_flora.jsp").forward(request, response);
 
         } else {
-          request.setAttribute("error", "<script>alert('La Flora no pudo ser actualizado correctamente')</script>");
+          request.setAttribute("error", "<script>Swal.fire('La Flora no pudo ser actualizado correctamente')</script>");
         }
         request.getRequestDispatcher("actualizar_flora.jsp").forward(request, response);
         
@@ -81,7 +81,7 @@ public class ServletFlora extends HttpServlet {
                   request.getRequestDispatcher("actualizar_flora.jsp").forward(request, response);
                   
               }else{
-              request.setAttribute("error","<script>alert('El yacimiento arqueologico no se encontro')</script>");
+              request.setAttribute("error","<script>Swal.fire('El yacimiento arqueologico no se encontro')</script>");
               request.getRequestDispatcher("vista_flora.jsp").forward(request, response);
                   
               }

@@ -54,21 +54,21 @@ public class ServletGeoparque extends HttpServlet {
 
       case 1://   Agregar Registro
         if (Dgeoparque.AgregarRegistro()) {
-          request.setAttribute("exito", "<script>alert('El Geoparque fue creado correctamente')</script>");
+          request.setAttribute("exito", "<script>Swal.fire('El Geoparque fue creado correctamente')</script>");
           request.getRequestDispatcher("Guardabosques.jsp").forward(request, response);
 
         } else {
-          request.setAttribute("error", "<script>alert('El Geoparque no pudo ser registrado correctamente')</script>");
+          request.setAttribute("error", "<script>Swal.fire('El Geoparque no pudo ser registrado correctamente')</script>");
         }
         request.getRequestDispatcher("crear_geoparque.jsp").forward(request, response);
         break;
  case 2://   Actualizar Registro
         if (Dgeoparque.ActualizarRegistro()) {
-          request.setAttribute("exito", "<script>alert('El Geoparque fue actualizado correctamente')</script>");
+          request.setAttribute("exito", "<script>Swal.fire('El Geoparque fue actualizado correctamente')</script>");
            request.getRequestDispatcher("vista_Geoparque.jsp").forward(request, response);
 
         } else {
-          request.setAttribute("error", "<script>alert('El Geoparque no pudo ser actualizado correctamente')</script>");
+          request.setAttribute("error", "<script>Swal.fire('El Geoparque no pudo ser actualizado correctamente')</script>");
         }
         request.getRequestDispatcher("actualizar_geoparque.jsp").forward(request, response);
         break;
@@ -81,7 +81,7 @@ public class ServletGeoparque extends HttpServlet {
                   request.getRequestDispatcher("actualizar_geoparque.jsp").forward(request, response);
                   
               }else{
-              request.setAttribute("error","<script>alert('El Geoparque no se encontro')</script>");
+              request.setAttribute("error","<script>Swal.fire('El Geoparque no se encontro')</script>");
               request.getRequestDispatcher("Vista_geoparque.jsp").forward(request, response);
                   
               }       

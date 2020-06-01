@@ -51,20 +51,20 @@ public class ServletFauna extends HttpServlet {
 
             case 1://   Agregar Registro
                 if (Dfauna.AgregarRegistro()) {
-                    request.setAttribute("exito", "<script>alert('La fauna fue creada correctamente')</script>");
+                    request.setAttribute("exito", "<script>Swal.fire('La fauna fue creada correctamente')</script>");
 
                 } else {
-                    request.setAttribute("error", "<script>alert('La fauna no pudo ser registrada correctamente')</script>");
+                    request.setAttribute("error", "<script>Swal.fire('La fauna no pudo ser registrada correctamente')</script>");
                 }
                 request.getRequestDispatcher("registrar_fauna.jsp").forward(request, response);
                 break;
 
             case 2://   Actualizar Registro
                 if (Dfauna.ActualizarRegistro()) {
-                    request.setAttribute("exito", "<script>alert('El Geositio fue actualizado correctamente')</script>");
+                    request.setAttribute("exito", "<script>Swal.fire('El Geositio fue actualizado correctamente')</script>");
                     request.getRequestDispatcher("vista_fauna.jsp").forward(request, response);
                 } else {
-                    request.setAttribute("error", "<script>alert('El Geositio no pudo ser actualizado correctamente intentelo de nuevo')</script>");
+                    request.setAttribute("error", "<script>Swal.fire('El Geositio no pudo ser actualizado correctamente intentelo de nuevo')</script>");
                     request.getRequestDispatcher("vista_fauna.jsp").forward(request, response);
                 }
                 request.getRequestDispatcher("actualizar_Fauna.jsp").forward(request, response);
@@ -78,7 +78,7 @@ public class ServletFauna extends HttpServlet {
                     request.getRequestDispatcher("actualizar_Fauna.jsp").forward(request, response);
 
                 } else {
-                    request.setAttribute("error", "<script>alert('La Fauna no se encontro')</script>");
+                    request.setAttribute("error", "<script>Swal.fire('La Fauna no se encontro')</script>");
                     request.getRequestDispatcher("Vista_fauna.jsp").forward(request, response);
 
                 }
